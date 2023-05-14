@@ -15,103 +15,72 @@
         <table class="table">
                 <tbody>
                     <tr *ngFor="let Educacion of educacion">
-                            <td>
-                                <h2>{{Educacion.nombreE}}</h2>
-                            </td>
-                    <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                        <td>
+                            <h2>{{Educacion.nombreE}}</h2>
+                        </td>
+                        <td>{{Educacion.descripcionE}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-success" routerLink="/editedu/{{Educacion.id}}">
                             <i class="bi bi-pencil-fill"></i>
-                        </button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            </button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Educacion.id)">
                             <i class="bi bi-x-octagon"></i>
-                        </button>
-                    </td> 
+                            </button>
+                        </td> 
                     <!--
-                            <ul>
-                            <li>
-                                <h1><img src="../../../assets/uba.png" >Lic. en Sistemas de la Información de las Organizaciones</h1> - <h3>(2021-actualidad)</h3>
-                            </li>
-                            <p>
-                                Me encuentro cursando la carrera de Lic. en Sistemas de la Información de las Organizaciones desde el año 2021.<br>
-                                Facultad de Ciencias Económicas UBA - Capital Federal, Buenos Aires.
-                            </p>
-                        </ul>
+                        <div class="row">
+                            <h1>Educacion</h1>
+                            <div class="col-lg-1></div>
+                            <div class="col-lg-11>
+                                <ul>
+                                    <li>
+                                        <h1><img src="../../../assets/uba.png" >Lic. en Sistemas de la Información de las Organizaciones</h1> - <h3>(2021-actualidad)</h3>
+                                    </li>
+                                    <p>
+                                        Me encuentro cursando la carrera de Lic. en Sistemas de la Información de las Organizaciones desde el año 2021.<br>
+                                        Facultad de Ciencias Económicas UBA - Capital Federal, Buenos Aires.
+                                    </p>
+                                </ul>
 
-                        <ul>
-                            <li>
-                                <h1><img src="../../../assets/bermejo.png" >Escuela de Comercio Dr. Antonio Bermejo</h1> - <h3>(2002-2007)</h3>
-                            </li>
-                            <p>
-                                Realicé mi educación secundaria en la Escuela de Comercio Dr. Antonio Bermejo y me reciví de Perito Mercantil en Orientación impositiva.<br>
-                                Escuela de Comercio Nro. 2 DE 1 "Dr. Antonio Bermejo" - Capital Federal, Buenos Aires 
-                            </p>            
-                        </ul>
+                                <ul>
+                                    <li>
+                                        <h1><img src="../../../assets/bermejo.png" >Escuela de Comercio Dr. Antonio Bermejo</h1> - <h3>(2002-2007)</h3>
+                                    </li>
+                                    <p>
+                                        Realicé mi educación secundaria en la Escuela de Comercio Dr. Antonio Bermejo y me reciví de Perito Mercantil en Orientación impositiva.<br>
+                                        Escuela de Comercio Nro. 2 DE 1 "Dr. Antonio Bermejo" - Capital Federal, Buenos Aires 
+                                    </p>            
+                                </ul>
 
-                        <ul>
-                            <li>
-                                <h1><img src="../../../assets/APLogo.png">#Se Programar</h1> - <h3>(2022)</h3>
-                            </li>
-                            <p>Realicé el curso Se Programar, programa del Ministerio de Desarrollo de la Nación, el cual consistió en brindar las herramientas básicas para adentrarnos al mundo de la programación.</p>
-                        </ul>
+                                <ul>
+                                    <li>
+                                        <h1><img src="../../../assets/APLogo.png">#Se Programar</h1> - <h3>(2022)</h3>
+                                    </li>
+                                    <p>Realicé el curso Se Programar, programa del Ministerio de Desarrollo de la Nación, el cual consistió en brindar las herramientas básicas para adentrarnos al mundo de la programación.</p>
+                                </ul>
 
-                        <ul>
-                            <li>
-                                <h1><img src="../../../assets/uba.png">Gestión de Datos con Ecxel</h1> - <h3>(2021)</h3>
-                            </li>
-                            <p>
-                                El curso fue brindad por la Facultad de Ciencias Económicas UBA, el cual consistió en brindar las herramientas básicas para utilizar esta herramienta en el manejo de los datos.
-                            </p>
-                        </ul>
+                                <ul>
+                                    <li>
+                                        <h1><img src="../../../assets/uba.png">Gestión de Datos con Ecxel</h1> - <h3>(2021)</h3>
+                                    </li>
+                                    <p>
+                                        El curso fue brindad por la Facultad de Ciencias Económicas UBA, el cual consistió en brindar las herramientas básicas para utilizar esta herramienta en el manejo de los datos.
+                                    </p>
+                                </ul>
 
-                        <ul>
-                            <li>
-                                <h1><img src="../../../assets/uba.png">Excel en la nube: Integración total de los conceptos.</h1> - <h3>(2015)</h3>
-                            </li>
-                            <p>
-                                El curso fue brindad por la Facultad de Ciencias Económicas UBA, el cual consistió integrar todos los conocimientos de esta herramienta para realizar un buen manejo de la información.
-                            </p>
-                        </ul>
-
-                        <p><img src="logos/uba.jpg">Lic. en Sistemas de la Información de las Organizaciones 2021 - actualidad<br>
-                        Facultad de Ciencias Económicas UBA - Capital Federal, Buenos Aires
-                        </p> 
-                        <p>Perito Mercantil en Orientación impositiva / 2007 <br>
-                            Escuela de Comercio Nro. 2 DE 1 "Dr. Antonio Bermejo" - Capital Federal, Buenos Aires 
-                            </p>      
-                        <p><img src="logos/logo-ArgPrograma.png">Se Programar, programa del Ministerio de Desarrollo de la Nación, periodo 2022</p>   
-                        <p>Gestión de Datos con Excel / 2021, CECE, FCE – UBA</p>
-                        <p>Curso introductorio: Internet, la Web y la Programación (2021)</p>
-                        <p>Excel en la nube: Integración total de los conceptos. F.C.E. U.B.A. (2015) </p>
-                       -->
-                       <!--
-    div class="row"
-    h1Educacion
-    div class="col-lg-1/div
-    div class="col-lg-11
-    ul
-    li
-    h1Trabajo1/h1 - h3(years)/h3
-    /li
-    p Lorem/p
-    /ul
-    ul
-    li
-    h1Trabajo2/h1 - h3(years)/h3
-    /li
-    p Lorem/p
-    /ul
-    ul
-    li
-    h1Trabajo3/h1 - h3(years)/h3
-    /li
-    p Lorem/p
-    /ul
-    /div
-    /div
--->   
+                                <ul>
+                                    <li>
+                                        <h1><img src="../../../assets/uba.png">Excel en la nube: Integración total de los conceptos.</h1> - <h3>(2015)</h3>
+                                    </li>
+                                    <p>
+                                        El curso fue brindad por la Facultad de Ciencias Económicas UBA, el cual consistió integrar todos los conocimientos de esta herramienta para realizar un buen manejo de la información.
+                                    </p>
+                                </ul>
+                            </div>
+                        </div>   
+                    -->   
                     </tr> 
                 </tbody>
         </table>

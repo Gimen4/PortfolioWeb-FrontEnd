@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 
 export class AcercaDeMiComponent implements OnInit {
-//Agrego mi nombre para que se muestre por pantalla
+
   persona: persona = new persona("","","");
 
   constructor(public personaService: PersonaService){}

@@ -10,7 +10,7 @@ import { SkillService } from 'src/app/service/skill.service';
 })
 export class EditSkillComponent implements OnInit {
   skill!: Skill;
-//skill: Skill = null;
+
   constructor(
     private skillS: SkillService,
     private activatedRouter: ActivatedRoute,

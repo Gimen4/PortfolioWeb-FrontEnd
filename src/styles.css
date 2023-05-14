@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+html { 
+    height: 100%; 
+}
+
+body { 
+    height: 100%; 
+
+    font-family: Robot, "Helvetica Neue", sans-serif;
+    
+    background-color: #F4F4F4;
+    
+    margin: 3em,1em,0,1em;
+
+    overflow: auto;
+    
+    min-width: 10em;
+    max-width: 100em;
+    min-height: auto;
+    max-height: none;
+ }

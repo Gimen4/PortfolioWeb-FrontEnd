@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+            <img src="../../../assets/APLogo.png" class="img-fluid rounded float-start" alt="Logo Argentina Programa s#YoProgramo" width ="100" height ="80" id="logoAP">
+        </div>
+            <!--
+                Las redes sociales 
+            -->
+        <div class="redes">            
+            <a href="https://github.com/" target="_blank"><img src="../../../assets/github.png" alt="GitHub" id="github"></a>
+            
+            <a href="https://ar.linkedin.com/" target="_blank"><img src="../../../assets/linkedin.png" alt="Linkedin" id="linkedin"></a>
+            
+            <a href="https://www.facebook.com/" target="_blank"><img src="../../../assets/facebook.png" alt="Facebook" id="facebook"></a>
+            
+            <a href="https://www.instagram.com/" target="_blank"><img src="../../../assets/instagram.png" alt="Instagram" id="instagram"></a>
+
+            <button type="button" class="btn btn-outline-light btn-sm" (click)="login()" *ngIf="!isLogged" id="btn">Ingresar</button>
+            
+            <button type="button" class="btn btn-outline-light btn-sm" (click)="onLogOut()" *ngIf="isLogged" id="btn">Cerrar sesión</button>
+        </div>
+
+    </div>
+
+</div>
+
+
